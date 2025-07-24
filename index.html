@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KBB - Keep Browsing Better</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0; padding:0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #2c3e50;
+    line-height: 1.6;
+  }
+  header {
+    background: #34495e;
+    padding: 20px 40px;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    user-select: none;
+    letter-spacing: 1.1px;
+    cursor: default;
+  }
+  nav button {
+    background: transparent;
+    border: 2px solid #ecf0f1;
+    color: #ecf0f1;
+    font-weight: 600;
+    padding: 8px 18px;
+    margin-left: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav button.active, nav button:hover {
+    background-color: #ecf0f1;
+    color: #34495e;
+  }
+  main {
+    max-width: 900px;
+    margin: 60px auto 40px;
+    padding: 0 20px;
+  }
+  h1, h2 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  p {
+    margin-bottom: 30px;
+    color: #4a5a6a;
+  }
+  section {
+    margin-bottom: 60px;
+  }
+  .tools-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tools-list li {
+    background: #ecf0f1;
+    padding: 15px 20px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    color: #34495e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tools-list li button {
+    background-color: #34495e;
+    border: none;
+    color: #ecf0f1;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .tools-list li button:hover {
+    background-color: #2c3e50;
+  }
+  footer {
+    text-align: center;
+    padding: 25px 10px;
+    background: #34495e;
+    color: #ecf0f1;
+    font-size: 0.9rem;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+    }
+    nav button {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    main {
+      margin: 40px 15px 30px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" id="logo">KBB</div>
+  <nav>
+    <button id="btn-en" class="active">EN</button>
+    <button id="btn-tr">TR</button>
+  </nav>
+</header>
+
+<main>
+  <section id="home">
+    <h1 data-i18n="title">Keep Browsing Better</h1>
+    <p data-i18n="subtitle">Experience a smarter, safer, and faster web.</p>
+  </section>
+
+  <section id="tools">
+    <h2 data-i18n="tools_title">Recommended Tools</h2>
+    <ul class="tools-list">
+      <li>
+        <div><strong>AdBlock Plus</strong><br /><small data-i18n="tool1_desc">Block annoying ads and popups.</small></div>
+        <button onclick="window.open('https://adblockplus.org', '_blank')" data-i18n="btn_visit">Visit</button>
+      </li>
+      <li>
+        <div><strong>LastPass</strong><br /><small data-i18n="tool2_desc">Secure password manager for all your accounts.</small></div>
+        <button onclick="window.open('https://lastpass.com', '_blank')" data-i18n="btn_visit">Visit</button>
+      </li>
+      <li>
+        <div><strong>Grammarly</strong><br /><small data-i18n="tool3_desc">Write mistake-free with AI-powered grammar checks.</small></div>
+        <button onclick="window.open('https://grammarly.com', '_blank')" data-i18n="btn_visit">Visit</button>
+      </li>
+      <li>
+        <div><strong>DuckDuckGo</strong><br /><small data-i18n="tool4_desc">Private search engine with no tracking.</small></div>
+        <button onclick="window.open('https://duckduckgo.com', '_blank')" data-i18n="btn_visit">Visit</button>
+      </li>
+      <li>
+        <div><strong>HTTPS Everywhere</strong><br /><small data-i18n="tool5_desc">Force secure HTTPS connections on every site.</small></div>
+        <button onclick="window.open('https://www.eff.org/https-everywhere', '_blank')" data-i18n="btn_visit">Visit</button>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p data-i18n="footer">© 2025 Keep Browsing Better — Made with ❤️ by UGK</p>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      title: "Keep Browsing Better",
+      subtitle: "Experience a smarter, safer, and faster web.",
+      tools_title: "Recommended Tools",
+      tool1_desc: "Block annoying ads and popups.",
+      tool2_desc: "Secure password manager for all your accounts.",
+      tool3_desc: "Write mistake-free with AI-powered grammar checks.",
+      tool4_desc: "Private search engine with no tracking.",
+      tool5_desc: "Force secure HTTPS connections on every site.",
+      btn_visit: "Visit",
+      footer: "© 2025 Keep Browsing Better — Made with ❤️ by UGK"
+    },
+    tr: {
+      title: "Daha İyi Gezin",
+      subtitle: "Daha akıllı, güvenli ve hızlı internet deneyimi.",
+      tools_title: "Önerilen Araçlar",
+      tool1_desc: "Can sıkıcı reklamları ve popupları engelleyin.",
+      tool2_desc: "Tüm hesaplarınız için güvenli parola yöneticisi.",
+      tool3_desc: "Yapay zekâ destekli yazım ve dilbilgisi kontrolü.",
+      tool4_desc: "İzlenmeden arama yapabileceğiniz gizli arama motoru.",
+      tool5_desc: "Her site için güvenli HTTPS bağlantısı zorlayın.",
+      btn_visit: "Git",
+      footer: "© 2025 Daha İyi Gezin — UGK tarafından sevgiyle yapıldı"
+    }
+  };
+
+  const btnEn = document.getElementById('btn-en');
+  const btnTr = document.getElementById('btn-tr');
+
+  function setLang(lang) {
+    btnEn.classList.toggle('active', lang === 'en');
+    btnTr.classList.toggle('active', lang === 'tr');
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      el.textContent = translations[lang][key];
+    });
+  }
+
+  btnEn.addEventListener('click', () => setLang('en'));
+  btnTr.addEventListener('click', () => setLang('tr'));
+
+  setLang('en');
+</script>
+
+</body>
+</html>
