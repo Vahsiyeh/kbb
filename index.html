@@ -2,53 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>We're Launching Soon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coming Soon</title>
+  <meta name="description" content="Exciting things are coming! Stay tuned for our launch.">
+  <link rel="icon" type="image/png" href="soon.png">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       height: 100vh;
-      background: linear-gradient(to bottom right, #0f0f0f, #1c1c1c);
-      color: #fff;
+      background: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+      color: white;
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      text-align: center;
       padding: 20px;
+      text-align: center;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #ff0000;
-    }
-    p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-      margin-bottom: 2rem;
-    }
+
     .loader {
-      border: 6px solid #444;
+      border: 6px solid rgba(255, 255, 255, 0.1);
       border-top: 6px solid #ff6600;
       border-radius: 50%;
       width: 60px;
       height: 60px;
       animation: spin 1s linear infinite;
-      margin-bottom: 1.5rem;
+      margin-bottom: 30px;
     }
+
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ff6600;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
     footer {
       position: absolute;
       bottom: 15px;
       font-size: 0.9rem;
-      color: #777;
+      color: #888;
     }
   </style>
 </head>
@@ -56,9 +66,9 @@
 
   <div class="loader"></div>
   <h1>We're Launching Soon</h1>
-  <p>Our website is getting ready. Stay tuned!</p>
+  <p>Our awesome website is on its way. Get ready for something amazing!</p>
 
-  <footer>&copy; 2025 chippychase.shop/ All rights reserved.</footer>
+  <footer>&copy; 2025 YourCompany. All rights reserved.</footer>
 
 </body>
 </html>
